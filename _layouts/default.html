@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+	{%- comment -%}
+	Load the compiled stylesheet that imports the Primer theme (see assets/css/style.scss below).
+	{%- endcomment -%}
+	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+	{%- if site.favicon_32 %}
+	<link rel="icon" href="{{ site.favicon_32 | relative_url }}" sizes="32x32">
+	{% endif -%}
+	{%- if site.favicon_16 %}
+	<link rel="icon" href="{{ site.favicon_16 | relative_url }}" sizes="16x16">
+	{% endif -%}
+	{%- if site.favicon_180 %}
+	<link rel="icon" href="{{ site.favicon_180 | relative_url }}">
+	{% endif -%}
+	{%- seo -%}
+</head>
+
+<body>
+
+	<header class="container-lg px-3 pt-4 pb-2">
+		<div class="d-flex flex-items-center">
+			{% if site.logo %}
+			<img src="{{ site.logo | relative_url }}" alt="Logo" style="height:48px;width:auto;margin-right:.75rem;">
+			{% endif %}
+			<div>
+				<h1 class="h2 lh-condensed m-0">{{ site.title }}</h1>
+				{% if site.description %}<p class="color-fg-muted mt-1 mb-0">{{ site.description }}</p>{% endif %}
+			</div>
+		</div>
+	</header>
+
+	<main class="container-lg px-3 my-5 markdown-body">
+		{{ content }}
+	</main>
+
+	<footer class="container-lg px-3 pb-6 color-fg-muted">
+		<p class="mt-6">
+			© {{ site.time | date: '%Y' }} {{ site.author | default: site.title }}.
+			{% if site.github_username %}
+			View on <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>.
+			{% endif %}
+		</p>
+	</footer>
+
+	{%- comment -%}
+	Optional: AnchorJS (Primer often uses this). Safe to remove if you don’t want heading anchors.
+	{%- endcomment -%}
+	<script src="https://unpkg.com/anchor-js@4.3.1/anchor.min.js"></script>
+	<script>if (window.anchors) anchors.add('h1, h2, h3');</script>
+</body>
+
+</html>

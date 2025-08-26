@@ -1,0 +1,12 @@
+title: "Stan Grishin (stangri)"
+description: "OpenWrt packages, docs, and projects"
+author: "Stan Grishin"
+github_username: stangri
+
+theme: jekyll-theme-primer
+
+logo: /assets/img/melmac.logo.png
+favicon_ico: /assets/img/favicon.ico
+favicon_16: /assets/img/favicon-16x16.png
+favicon_32: /assets/img/favicon-32x32.png
+favicon_180: /assets/img/favicon-180x180.png
