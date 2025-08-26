@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "Hi, I'm Stan Grishin"
+title: "Home"
 ---
+
+## Hi, I'm Stan Grishin
 
 I'm the developer and maintainer of multiple OpenWrt packages focused on privacy, performance, and automation.
 
